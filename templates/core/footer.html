@@ -1,0 +1,219 @@
+{% load static %}  
+  <!----footer-section------>
+    <section class="footer-section">
+        <div class="container">
+            <h2 class="mt-4 mb-4">Учи.ру</h2>
+            <div class="row">
+                    {% for i in footcategories%}
+                <div class="col-md-3">
+                    <div class="footer-text">
+                         {% if i.children.all %}
+                        <h3>{{i.title}} </h3>
+                        <ul class="trend_list">
+                            {% for subcat in i.children.all %}                            
+                            <li>
+                                <a href="#">
+                         {{subcat.title}}
+                       </a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                    {% endfor %}
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h3>Компания</h3>
+                        <ul class="trend_list">
+                            <li>
+                                <a href="#">
+                        О нас
+                       </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                       Новости и СМИ
+                       </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                        Отзывы
+                       </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                        Связаться с нами
+                       </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Вебинары
+                                </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                    Блог
+                                </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                         Сообщество
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                         Места
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                        Карта сайта
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                        Карта сайта блога
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                        Карта сайта сообщества
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                       Карта города
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                       Корпоративное обучение
+                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h3>Работать с нами </h3>
+                        <ul class="trend_list">
+                            <li>
+                                 <a href="#">
+                         Карьера
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                         AСтать инструктором
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                        Стать партнером
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                         Стать партнером
+                        </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                          Прокат от Учи.ру
+                        </a>
+                             </li>
+                         </ul>
+                        <div class="Download-App">
+                            <h3>Скачать приложение</h3>
+                            <a href="#">
+                                <img src="{% static 'images/d1.png' %}">
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/d2.png' %}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="CATEGORIES pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-body">
+                        <h3 class="hidden-xs">Категории</h3>
+                        <ul class="trend_cat_list">
+                        {% for i in allcat %}
+                            <li>
+                                <a href="#">{{i.title}}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="panel-body">
+                        <h3 class="hidden-xs">Отказ</h3>
+                        {% for i in disc_cat %}
+                        <ul class="trend_cat_list disc">
+                            <li>
+                                <a href="#">{{i.title}}</a>
+                            </li>
+                        </ul>
+                        {% endfor %} 
+                        {% for i in disc_blog %}
+                        <ul class="trend_cat_list disc">    
+                            <li>
+                                <a href="#">{{i.title}}</a>
+                            </li>
+                        </ul>    
+                        {% endfor %}
+                        {% for i in disc_post %}
+                        <ul class="trend_cat_list disc">
+                            <li>
+                                <a href="#">{{i.title}}</a>
+                            </li>
+                        </ul>    
+                        {% endfor %}
+                    </div>
+                </div>
+                    <div class="tncblock">
+                        <span class="brain4ce">© 2023. Все права защищены.</span>
+                        <a href="#">Условия & Права использования</a>
+                        <a href="#">Юридическая информация & Конфиденциальность</a>
+                        <ul class="list-unstyled footer-social-icon">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section class="copy-right text-center mt-4 mb-4">
+        <div class="container">
+            <span>Связаться с разработчиком <i class="fa fa-heart pulse"></i> <a href="https://t.me/bashir_77" style="color: black" target="_blank">Bashir</a> </span>
+        </div>
+
+    </section>
